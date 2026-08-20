@@ -28,6 +28,7 @@ const ProductCard = ({
             src={productDetails.image}
             alt={productDetails.title}
             fill
+            priority
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             className="object-cover object-center transition-transform duration-300 ease-in-out hover:scale-105"
           />
