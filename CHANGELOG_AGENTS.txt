@@ -1,0 +1,9 @@
+# Agent Changelog
+
+- **[2026-05-31] app/components/navbar.tsx**: Reduced the vertical padding (space above and below the main content) from `py-3 md:py-6` to `py-2 md:py-3`. Reduced the max-width of the navbar container from `max-w-[1395px]` to `max-w-6xl` to bring the logo and "Home" link closer together. Increased the spacing between navbar elements from `gap-8` to `gap-12`.
+
+- **[2026-05-31] app/components/EnrollmentForm.tsx & Supabase**: Created a new EnrollmentForm component to collect Name, Phone, and Course. Integrated with Supabase via @supabase/supabase-js.
+- **[2026-05-31] app/components/CourseSection.tsx**: Added the EnrollmentForm beside the courses grid. Updated 'Enroll Yourself' CTA to scroll to this form and added a 'WhatsApp Us' CTA that routes to WhatsApp.
+- **[2026-05-31] app/components/ClassCard.tsx**: Updated 'Enroll Yourself' CTA to scroll to the form and added a 'WhatsApp Us' CTA that routes to WhatsApp.
+
+- **[2026-06-01] app/components/EnrollmentForm.tsx**: Added support for multiple form submissions. The success screen now shows a 'Submit Another Response' button and automatically resets the form to idle state after 60 seconds.

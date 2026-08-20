@@ -1,0 +1,78 @@
+const courses = [
+  {
+    id: 1,
+    thumbnail: "/courses/fabric.jpg",
+    courseName: "FABRIC PAINTING",
+    ageGroup: "15+",
+    fee: 10000,
+    totalClasses: 24,
+    days: "Tue-Thu",
+    timings: "3.30-5.00 PM (Evening)",
+    materials: "Material Included",
+  },
+  {
+    id: 2,
+    thumbnail: "/courses/tanjour.jpeg",
+    courseName: "TANJOUR PAINTING",
+    classType: "Scratch to Advance",
+    ageGroup: "15+",
+    fee: 55000,
+    totalClasses: 72,
+    days: "Tue-Thu-Sat",
+    timings: "11.00-12.30 PM (Morning)",
+    materials: "Material Included",
+  },
+  {
+    id: 3,
+    thumbnail: "/courses/madhubani.jpeg",
+    courseName: "MADHUBANI PAINTING",
+    classType: "Base: Fabric, Paper, Canvas",
+    ageGroup: "15+",
+    fee: 8000,
+    totalClasses: 24,
+    days: "Mon-Wed-Fri",
+    timings: "3.30-5.00 PM (Evening)",
+    materials: "Material Included",
+  },
+  {
+    id: 4,
+    thumbnail: "/courses/reliefart.jpeg",
+    courseName:
+      "RELIEF ART WORK",
+    classType: "Basic + Advance | Base: Ply, Wood, Mirror, Ceramic",
+      ageGroup: "15+",
+    fee: 42000,
+    totalClasses: 36,
+    days: "Mon-Wed-Fri",
+    timings: "11.30 AM - 1.30 PM (Morning)",
+    materials: "Material Included",
+  },
+  {
+    id: 5,
+    thumbnail: "/courses/pichwai.jpeg",
+    courseName:
+      "PICHWAI ART",
+    classType: "Base: Paper, Marble Tile, Fabric",
+      ageGroup: "15+",
+    fee: 40000,
+    totalClasses: 36,
+    days: "Mon-Wed-Fri",
+    timings: "11.30 AM - 1.30 PM (Morning)",
+    materials: "Material Included",
+  },
+  {
+    id: 6,
+    thumbnail: "/courses/fineart.jpeg",
+    courseName:
+      "FINE ART (DIPLOMA)",
+    classType: "Basic + Advance",
+      ageGroup: "12+",
+    fee: 30000,
+    totalClasses: 96,
+    days: "Mon-Wed-Fri",
+    timings: "3.30 PM - 5.30 PM (Evening)",
+  },
+
+];
+
+export { courses };
