@@ -12,6 +12,7 @@ interface ClassCardProps {
   days: string;
   timings: string;
   materials?: string;
+  onEnroll?: (className: string) => void;
 }
 
 export default function ClassCard({
@@ -23,6 +24,7 @@ export default function ClassCard({
   days,
   timings,
   materials,
+  onEnroll,
 }: ClassCardProps) {
   const classSlug = slugify(className);
 
@@ -88,8 +90,12 @@ export default function ClassCard({
           <div className="flex flex-col gap-2 w-full mt-2">
             <button
               onClick={() => {
-                const form = document.getElementById("enroll-form");
-                if (form) form.scrollIntoView({ behavior: "smooth", block: "center" });
+                if (onEnroll) {
+                  onEnroll(className);
+                } else {
+                  const form = document.getElementById("class-enroll-form");
+                  if (form) form.scrollIntoView({ behavior: "smooth", block: "center" });
+                }
               }}
               className="w-full bg-[#9C3D14] text-white py-2 text-lg cursor-pointer hover:bg-[#833310] transition-colors"
               style={{ fontFamily: "Futura PT" }}

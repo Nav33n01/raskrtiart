@@ -7,7 +7,6 @@ import ProductCard from '@/app/components/ProductCard';
 import ProductGallery from '@/app/components/ProductGallery';
 import Image from 'next/image';
 import { buyProductRedirect } from '@/app/utils/whatsappRedirect';
-import Link from 'next/link';
 import NotFound from '@/app/not-found';
 
 const Page = ({ params }: { params: Promise<{ slug: string }> }) => {

@@ -77,7 +77,7 @@ export default function Footer() {
             >
               <li>
                 <a href="#courses" onClick={(e) => handleSmoothScroll(e, "courses")} className="hover:underline">
-                  Tanjore Painting
+                  Tanjour Painting
                 </a>
               </li>
               <li>
@@ -124,7 +124,7 @@ export default function Footer() {
             >
               <li>
                 <a href="#classes" onClick={(e) => handleSmoothScroll(e, "classes")} className="hover:underline">
-                  Tanjore Painting
+                  Tanjour Painting
                 </a>
               </li>
               <li>
@@ -186,7 +186,7 @@ export default function Footer() {
               </li>
               <li>
                 <a href="#store" onClick={(e) => handleSmoothScroll(e, "store")} className="hover:underline">
-                  Tanjore Artworks
+                  Tanjour Artworks
                 </a>
               </li>
             </ul>

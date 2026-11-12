@@ -1,7 +1,6 @@
 "use client";
 import { aboutData } from "../data/aboutSection";
 
-import Image from "next/image";
 import Button from "./Button";
 
 export default function AboutSection() {

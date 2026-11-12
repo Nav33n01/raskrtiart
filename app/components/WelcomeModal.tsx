@@ -5,13 +5,20 @@ import Image from "next/image";
 import { supabase } from "../utils/supabase";
 import { IoClose } from "react-icons/io5";
 
+// In-memory flag that stays true during client-side SPA navigation,
+// but resets to false whenever the browser reloads / refreshes.
+let hasShownInCurrentSession = false;
+
 export default function WelcomeModal() {
   const [isOpen, setIsOpen] = useState(false);
   const [formData, setFormData] = useState({ name: "", phone: "", query: "" });
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
 
-  // Auto-open modal on every site visit / refresh
+  // Auto-open modal ONLY on fresh website load / browser refresh, NOT on client-side route navigation
   useEffect(() => {
+    if (hasShownInCurrentSession) return;
+    hasShownInCurrentSession = true;
+
     const timer = setTimeout(() => {
       setIsOpen(true);
     }, 1000); // 1-second delay for smooth load

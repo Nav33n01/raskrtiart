@@ -1,11 +1,24 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { courses } from "../data/coursesData";
 import { courseEnrollRedirect, slugify } from "../utils/whatsappRedirect";
 import EnrollmentForm from "./EnrollmentForm";
 
 export default function CoursesSection() {
+  const [selectedCourse, setSelectedCourse] = useState("");
+  const [formKey, setFormKey] = useState(0);
+
+  const handleEnroll = (courseName: string) => {
+    setSelectedCourse(courseName);
+    setFormKey((prev) => prev + 1);
+    const form = document.getElementById("course-enroll-form");
+    if (form) {
+      form.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  };
+
   return (
     <section id="courses" className="bg-[#FBF4EC] pt-20">
       <div className="max-w-[1395px] mx-auto h-fit px-5 md:px-8 flex flex-col">
@@ -83,10 +96,7 @@ export default function CoursesSection() {
                       {/* Buttons */}
                       <div className="flex flex-col gap-2 w-full mt-2">
                         <button
-                          onClick={() => {
-                            const form = document.getElementById("enroll-form");
-                            if (form) form.scrollIntoView({ behavior: "smooth", block: "center" });
-                          }}
+                          onClick={() => handleEnroll(course.courseName)}
                           className="w-full bg-[#9C3D14] text-white py-2 text-lg font-medium cursor-pointer hover:bg-[#833310] transition-colors"
                           style={{ fontFamily: "Futura PT" }}
                           suppressHydrationWarning
@@ -123,7 +133,16 @@ export default function CoursesSection() {
 
           {/* Form */}
           <div className="lg:w-1/3 w-full lg:sticky lg:top-24 mt-10 lg:mt-0">
-            <EnrollmentForm />
+            <EnrollmentForm
+              key={formKey}
+              id="course-enroll-form"
+              formTitle="Enroll in Course"
+              courseLabel="Course Interested In"
+              coursePlaceholder="E.g., Tanjour Painting, Madhubani..."
+              defaultCourse={selectedCourse}
+              autoFocus={formKey > 0}
+              autoHighlight={formKey > 0}
+            />
           </div>
 
         </div>

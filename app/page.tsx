@@ -8,7 +8,6 @@ import ArtGallery from './components/ArtGallery'
 import EventCarousel from './components/events'
 import FounderSection from './components/FounderSection'
 import ContactUs from './components/contactUs'
-import Footer from './components/footer'
 import Button from './components/Button';
 import Testimonials from './components/Testimonials'
 import BulkOrderModal from './components/BulkOrderModal'
@@ -17,19 +16,12 @@ import { storeProducts } from './data/storeData'
 import CoursesOffer from './components/CourseSection'
 import ClassSection from './components/ClassSection'
 import AboutSection from './components/about'
-import WhatsAppChat from './components/WhatsAppChat'
-
-
-import WelcomeModal from './components/WelcomeModal'
 
 const Page = () => {
   const [isBulkModalOpen, setIsBulkModalOpen] = useState(false);
 
   return (
     <div>
-      {/* ============Welcome Visitor Popup Modal============ */}
-      <WelcomeModal />
-
       {/* ============Carousel Section============ */}
       <Carousel />
 
@@ -150,6 +142,7 @@ const Page = () => {
           {/* Right Column — Artwork Inquiry Form */}
           <div className="lg:w-1/3 w-full lg:sticky lg:top-24 mt-10 lg:mt-0">
             <EnrollmentForm
+              id="store-inquiry-form"
               formTitle="Buy Artwork"
               courseLabel="What You Want to Know?"
               coursePlaceholder="E.g., Artwork dimensions, custom painting..."
